@@ -1,0 +1,86 @@
+
+
+
+.bgcolor{
+    background-color: hsl(20, 20%, 15%);
+}
+
+
+.heroSection{
+    min-height: 80vh;
+    background-color: hsl(20, 30%, 35%);
+}
+
+.btn{
+    background-color: hsl(20, 30%, 35%);
+    border-color: hsl(20, 30%, 35%);
+}
+.btn:hover{
+    background-color: hsl(20, 30%, 27%);
+    border-color: hsl(20, 30%, 27%);
+}
+
+.boxshadow{
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.08);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+.boxshadow:hover{
+    transform: translateY(-6px);
+    box-shadow: 0 10px 24px rgba(0, 0, 0, 0.12);
+}
+
+.bgFooter{
+    background-color: hsl(20, 20%, 15%);
+}
+
+footer ul li a {
+    color: #fff;
+}
+
+footer ul li a:hover {
+    color: hsl(40, 30%, 90%);
+}
+
+
+
+/* classe per avere le immagini nelle card tutte della stessa dimensione */
+.Imglavori {
+    width: 100%;
+    aspect-ratio: 4 / 3;
+    object-fit: cover;
+}
+
+/* Filtri */
+.filterBtn {
+    background: transparent;
+    color: hsl(20, 30%, 35%);
+    border: 1px solid hsl(20, 30%, 35%);
+    border-radius: 2rem;
+    padding: 0.35rem 1rem;
+    transition: background-color 0.25s ease, color 0.25s ease;
+}
+.filterBtn:hover,
+.filterBtn.active {
+    background-color: hsl(20, 30%, 35%);
+    color: #fff;
+}
+
+
+
+/* tema scuro */
+#cambiaTema{
+background-color: hsl(20, 20%, 15%) ;
+border: none;
+}
+body.temaScuro{
+    background-color:#121212 ;
+    color: #f0f0f0;
+}
+.temaScuro :is(#contatti, #servizi, #lavori) {
+    background-color: #1e1e1e !important;
+}
+
+.temaScuro .card{
+background-color: #121212 ;
+color:white
+}
