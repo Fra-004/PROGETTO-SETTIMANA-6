@@ -107,3 +107,38 @@ tema.addEventListener("click", function () {
 });
 
 render(lavori);
+
+
+// validazione form
+const form = document.getElementById("form");
+const email = document.getElementById("email");
+const messaggio= document.getElementById("messaggio");
+const formAlert = document.getElementById("formAlert");
+
+
+form.addEventListener("submit", (e) => {
+    e.preventDefault();
+
+    const errori = [];
+
+    if (!email.value.includes("@")) {
+        errori.push("L'email deve contenere  il simbolo @.");
+    }
+    if (messaggio.value.trim().length < 20) {
+        errori.push("l'email deve contenere almeno 20 caratteri.");
+    }
+    if (errori.length > 0) {
+    mostraAlert("danger", errori.join(" ")); //chiamo la funzione mostraalert e inserisco il testo che ho salvato nell'array errori
+    return;
+}
+    mostraAlert("success", "contatti inviati! Ti risponderemo entro 48 ore.");
+    form.reset();
+}); 
+
+function mostraAlert(tipo, testo) {
+    const alert = document.createElement("div");
+    alert.className = `alert alert-${tipo} mb-0`; //aggiungo classi bootstrap
+    alert.setAttribute("role", "alert"); //per eventuali screen reader
+    alert.textContent = testo;
+    formAlert.replaceChildren(alert);
+}
